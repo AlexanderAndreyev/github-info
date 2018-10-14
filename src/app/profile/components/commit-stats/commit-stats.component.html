@@ -1,0 +1,8 @@
+<div class="qw-container">
+    <mat-spinner [diameter]="20" *ngIf="loading"></mat-spinner>
+
+    <div *ngIf="!loading">
+        <button mat-button color="primary" (click)="onLoadTotalCommits()" *ngIf="!totalCommits">Load commits</button>
+        {{ totalCommits }}
+    </div>
+</div>

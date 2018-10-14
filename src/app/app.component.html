@@ -1,0 +1,23 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row class="toolbar-container">
+        <div class="button-row">
+            <button mat-button routerLink="/user">Sign in</button>
+            <button mat-button routerLink="/profile">Profile</button>
+        </div>
+
+        <div>
+            <span>{{ (userProfile$ | async)?.login }}</span>
+            <button mat-button (click)="onSignOut()">Sign out</button>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
